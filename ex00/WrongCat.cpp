@@ -1,31 +1,31 @@
-# include "Cat.hpp"
+# include "WrongCat.hpp"
 
-Cat::Cat():Animal()
+WrongCat::WrongCat():WrongAnimal()
 {
-	this->type = "Cat";
+	this->type = "WrongCat";
 	std::cout << "An animal type " << this->type << " has been created!";
 }
 
-Cat::Cat(const Cat& copi)
+WrongCat::WrongCat(const WrongCat& copi)
 {
 	this->type = copi.type;
 	std::cout << "An animal type " << this->type << " has been born from another one!" << std::endl;
 }
 
-Cat& Cat::operator =(const Cat& copi)
+WrongCat& WrongCat::operator =(const WrongCat& copi)
 {
 	this->type = copi.type;
 	std::cout << "An animal type " << this->type << " has been copied from another one!" << std::endl;
 	return (*this);
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
 	std::cout << "An animal type " << this->type << " has died!";
 	return ;
 }
 
-void	Cat::makeSound()
+void	WrongCat::makeSound()
 {
 	std::cout << "miaouuuu miaou miaou miaouuuuuuuuuuuuuu! " << std::endl;
 }

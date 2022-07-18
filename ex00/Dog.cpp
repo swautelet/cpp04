@@ -3,7 +3,7 @@
 Dog::Dog():Animal()
 {
 	this->type = "Dog";
-	std::cout << "An animal type " << this->type << " has been created!";
+	std::cout << "An animal type " << this->type << " has been created!" << std::endl;
 }
 
 Dog::Dog(const Dog& copi)
@@ -21,7 +21,7 @@ Dog& Dog::operator =(const Dog& copi)
 
 Dog::~Dog()
 {
-	std::cout << "An animal type " << this->type << " has died!";
+	std::cout << "An animal type " << this->type << " has died!" << std::endl;
 	return ;
 }
 

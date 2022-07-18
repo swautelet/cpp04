@@ -1,4 +1,4 @@
-SRC = main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Animal.cpp
 NAME = animal
 CPPFLAGS = -Werror -Wextra -Wall -std=c++98
 OBJ=$(SRC:%.cpp=%.o)

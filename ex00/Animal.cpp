@@ -16,6 +16,7 @@ Animal& Animal::operator =(const Animal& copi)
 {
 	std::cout << "An animal type has been copied!" << std::endl;
 	this->type = copi.type;
+	return (*this);
 }
 
 Animal::~Animal()

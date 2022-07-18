@@ -3,7 +3,7 @@
 Cat::Cat():Animal()
 {
 	this->type = "Cat";
-	std::cout << "An animal type " << this->type << " has been created!";
+	std::cout << "An animal type " << this->type << " has been created!" << std::endl;
 }
 
 Cat::Cat(const Cat& copi)
@@ -21,7 +21,7 @@ Cat& Cat::operator =(const Cat& copi)
 
 Cat::~Cat()
 {
-	std::cout << "An animal type " << this->type << " has died!";
+	std::cout << "An animal type " << this->type << " has died!" << std::endl;
 	return ;
 }
 
