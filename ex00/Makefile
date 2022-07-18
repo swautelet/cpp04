@@ -1,5 +1,5 @@
-SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
-NAME = claptrap
+SRC = main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+NAME = animal
 CPPFLAGS = -Werror -Wextra -Wall -std=c++98
 OBJ=$(SRC:%.cpp=%.o)
 

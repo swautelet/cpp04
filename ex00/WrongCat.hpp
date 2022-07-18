@@ -14,7 +14,6 @@ class WrongCat: public WrongAnimal{
 	private:
 
 	protected:
-		std::string type;
 		
 };
 

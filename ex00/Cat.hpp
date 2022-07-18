@@ -14,7 +14,6 @@ class Cat: public Animal{
 	private:
 	
 	protected:
-		std::string type;
 
 };
 

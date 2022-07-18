@@ -8,17 +8,19 @@ Animal::Animal():type("random Animal")
 
 Animal::Animal(const Animal& copi)
 {
+	std::cout << "A new animal is born form another one!" << std::endl;
 	this->type = copi.type;
 }
 
 Animal& Animal::operator =(const Animal& copi)
 {
+	std::cout << "An animal type has been copied!" << std::endl;
 	this->type = copi.type;
 }
 
 Animal::~Animal()
 {
-
+	std::cout << "A random animal is dead!" << std::endl;
 }
 
 void	Animal::makeSound()
