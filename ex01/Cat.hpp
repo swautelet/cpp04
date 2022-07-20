@@ -11,6 +11,7 @@ class Cat: public Animal{
 		Cat& operator =(const Cat& copi);
 		~Cat();
 		void makeSound();
+		Brain& getBrain();
 
 	private:
 		Brain *_brain;

@@ -33,3 +33,8 @@ void	Dog::makeSound()
 {
 	std::cout << "wouf wouf ahouuuuuuuuh ahouhh aouhaouh! " << std::endl;
 }
+
+Brain& Dog::getBrain()
+{
+	return(*(this->_brain));
+}

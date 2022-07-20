@@ -10,6 +10,7 @@ class Brain{
 		Brain(const Brain& copi);
 		Brain&	operator =(const Brain& copi);
 		~Brain();
+		void	showthoughts();
 
 	private:
 		std::string	ideas[100];

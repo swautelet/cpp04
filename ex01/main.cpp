@@ -20,6 +20,10 @@ int main()
 	}
 	for (int i = 0; i < size; i++)
 	{
+		if (i % 2 == 0)
+			dynamic_cast<Cat *>(test[i])->getBrain().showthoughts();
+		else
+			dynamic_cast<Dog *>(test[i])->getBrain().showthoughts();
 		delete test[i];
 	}
 }
