@@ -9,7 +9,7 @@ class Animal{
 		Animal();
 		Animal(const Animal& copi);
 		Animal& operator =(const Animal& copi);
-		~Animal();
+		virtual ~Animal() = 0;
 		virtual void makeSound();
 		
 	private:

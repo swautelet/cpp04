@@ -3,8 +3,8 @@
 Dog::Dog():Animal()
 {
 	this->type = "Dog";
-	this->_brain = new Brain();
 	std::cout << "An animal type " << this->type << " has been created!" << std::endl;
+	this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog& copi)
