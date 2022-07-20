@@ -8,8 +8,8 @@ class Animal{
 	public:
 		Animal();
 		Animal(const Animal& copi);
-		Animal& operator =(const Animal& copi);
-		virtual ~Animal() = 0;
+		virtual Animal& operator =(const Animal& copi);
+		virtual ~Animal();
 		virtual void makeSound();
 		
 	private:

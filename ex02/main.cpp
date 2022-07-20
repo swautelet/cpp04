@@ -6,6 +6,7 @@ int main()
 {
 	int size = 4;
 	Animal *test[size];
+	// Animal derp;
 
 	for (int i = 0; i < size; i++)
 	{
