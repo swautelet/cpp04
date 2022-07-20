@@ -2,6 +2,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat: public Animal{
 	public:
@@ -12,7 +13,8 @@ class Cat: public Animal{
 		void makeSound();
 
 	private:
-	
+		Brain *_brain;
+
 	protected:
 
 };

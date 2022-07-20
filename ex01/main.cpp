@@ -4,15 +4,22 @@
 
 int main()
 {
-	Animal ta;
-	Dog	td;
-	Cat	tc;
-	WrongAnimal twa;
-	WrongCat	twc;
+	Animal *test[10];
 
-	ta.makeSound();
-	td.makeSound();
-	tc.makeSound();
-	twa.makeSound();
-	twc.makeSound();
+	for (int i = 0; i < 10; i++)
+	{
+		if (i % 2 == 0)
+			test[i] = new Cat();
+		else
+			test[i] = new Dog();
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		test[i]->makeSound();
+	}
+	// Cat deep (*test[0]);
+	for (int i = 0; i < 10; i++)
+	{
+		delete test[i];
+	}
 }

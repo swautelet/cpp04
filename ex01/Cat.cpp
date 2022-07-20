@@ -3,18 +3,21 @@
 Cat::Cat():Animal()
 {
 	this->type = "Cat";
+	this->_brain = new Brain();
 	std::cout << "An animal type " << this->type << " has been created!" << std::endl;
 }
 
 Cat::Cat(const Cat& copi)
 {
 	this->type = copi.type;
+	this->_brain = copi._brain;
 	std::cout << "An animal type " << this->type << " has been born from another one!" << std::endl;
 }
 
 Cat& Cat::operator =(const Cat& copi)
 {
 	this->type = copi.type;
+	this->_brain = copi._brain;
 	std::cout << "An animal type " << this->type << " has been copied from another one!" << std::endl;
 	return (*this);
 }
@@ -22,6 +25,7 @@ Cat& Cat::operator =(const Cat& copi)
 Cat::~Cat()
 {
 	std::cout << "An animal type " << this->type << " has died!" << std::endl;
+	delete this->_brain;
 	return ;
 }
 

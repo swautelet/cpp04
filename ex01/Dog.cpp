@@ -3,18 +3,21 @@
 Dog::Dog():Animal()
 {
 	this->type = "Dog";
+	this->_brain = new Brain();
 	std::cout << "An animal type " << this->type << " has been created!" << std::endl;
 }
 
 Dog::Dog(const Dog& copi)
 {
 	this->type = copi.type;
+	this->_brain = copi._brain;
 	std::cout << "An animal type " << this->type << " has been born from another one!" << std::endl;
 }
 
 Dog& Dog::operator =(const Dog& copi)
 {
 	this->type = copi.type;
+	this->_brain = copi._brain;
 	std::cout << "An animal type " << this->type << " has been copied from another one!" << std::endl;
 	return (*this);
 }
@@ -22,6 +25,7 @@ Dog& Dog::operator =(const Dog& copi)
 Dog::~Dog()
 {
 	std::cout << "An animal type " << this->type << " has died!" << std::endl;
+	delete this->_brain;
 	return ;
 }
 
