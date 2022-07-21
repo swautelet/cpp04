@@ -21,7 +21,7 @@ WrongCat& WrongCat::operator =(const WrongCat& copi)
 
 WrongCat::~WrongCat()
 {
-	std::cout << "An animal type " << this->type << " has died!";
+	std::cout << "An animal type " << this->type << " has died!" << std::endl;
 	return ;
 }
 
