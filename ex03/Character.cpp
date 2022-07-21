@@ -6,6 +6,10 @@ Character::Character():_name("default name")
 	{
 		inventory[i] = NULL;
 	}
+	for (int i = 0; i < floor_size; i++)
+	{
+		floor[i] = NULL;
+	}
 }
 
 Character::Character(std::string name):_name(name)
@@ -15,7 +19,20 @@ Character::Character(std::string name):_name(name)
 
 Character::~Character()
 {
-
+	for (int i = 0; i < inv_size; i++)
+	{
+		if (inventory[i])
+		{
+			delete (inventory[i]);
+		}
+	}
+	for (int i = 0; i < floor_size; i++)
+	{
+		if (floor[i])
+		{
+			delete (floor[i]);
+		}
+	}
 }
 
 std::string const& Character::getName() const
@@ -59,7 +76,20 @@ void	Character::unequip(int idx)
 		}
 		else
 		{
-			// i have to first save the ptr to have no leaks
+			
+			for (int i = 0; i < floor_size; i++)
+			{
+				if (floor[i] == NULL)
+				{
+					floor[i] = inventory[idx];
+					break ;
+				}
+				else if (i == floor_size - 1 && floor[floor_size - 1])
+				{
+					std::cout << "No place left on the floor to unequip materia!" << std::endl;
+					return ;
+				}
+			}
 			std::cout << "I unequiped the materia number " << idx << std::endl;
 			inventory[idx] = NULL;
 		}

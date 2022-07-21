@@ -16,7 +16,9 @@ class Character:public ICharacter{
 
 	private:
 		static const int inv_size = 4;
+		static const int floor_size = 1000;
 		AMateria* inventory[inv_size];
+		AMateria* floor[floor_size];
 		std::string _name;
 
 	protected:

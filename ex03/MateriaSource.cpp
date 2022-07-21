@@ -10,7 +10,13 @@ MateriaSource::MateriaSource():IMateriaSource()
 
 MateriaSource::~MateriaSource()
 {
-
+	for (int i = 0; i < inv_size; i++)
+	{
+		if (inv[i])
+		{
+			delete(inv[i]);
+		}
+	}
 }
 
 void	MateriaSource::learnMateria(AMateria* next)
