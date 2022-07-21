@@ -3,7 +3,7 @@
 WrongCat::WrongCat():WrongAnimal()
 {
 	this->type = "WrongCat";
-	std::cout << "An animal type " << this->type << " has been created!";
+	std::cout << "An animal type " << this->type << " has been created!" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& copi)
