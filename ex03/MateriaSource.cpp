@@ -25,7 +25,7 @@ void	MateriaSource::learnMateria(AMateria* next)
 	{
 		if (inv[i] == NULL)
 		{
-			inv[i] = next->clone();
+			inv[i] = next;
 			std::cout << "Materia type " << next->getType() << " learned!" << std::endl;
 			return ;
 		}
