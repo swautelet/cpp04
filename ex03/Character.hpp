@@ -1,14 +1,13 @@
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
 
 class Character:public ICharacter{
 	public:
 		Character();
-		Character::Character(std::string name);
+		Character(std::string name);
 		~Character();
 		std::string const& getName() const;
 		void equip(AMateria* m);

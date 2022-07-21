@@ -11,7 +11,8 @@ class MateriaSource:public IMateriaSource{
 		AMateria*	createMateria(std::string const& type);
 
 	private:
-		AMateria* inv[4];
+		static const int inv_size = 4;
+		AMateria* inv[inv_size];
 
 	protected:
 	
