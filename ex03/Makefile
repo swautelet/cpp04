@@ -1,5 +1,5 @@
-SRC = main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Animal.cpp Brain.cpp
-NAME = animal
+SRC = main.cpp IMateriaSource.cpp ICharacter.cpp Ice.cpp Cure.cpp AMateria.cpp
+NAME = materia
 CPPFLAGS = -Werror -Wextra -Wall -std=c++98
 OBJ=$(SRC:%.cpp=%.o)
 

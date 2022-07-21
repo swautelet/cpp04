@@ -1,7 +1,9 @@
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-# include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "IMateriaSource.hpp"
 
 class ICharacter{
 	public:

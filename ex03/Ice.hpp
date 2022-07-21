@@ -1,7 +1,9 @@
 #ifndef ICE_HPP
 # define ICE_HPP
 
-class Cure{
+#include "AMateria.hpp"
+
+class Ice: public AMateria{
 	public:
 		Ice();
 		~Ice();
