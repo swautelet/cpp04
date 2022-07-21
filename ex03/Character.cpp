@@ -52,6 +52,20 @@ void	Character::equip(AMateria* m)
 	if (i == inv_size)
 	{
 		std::cout << "Inventory full can't equip another materia!" << std::endl;
+		for (int i = 0; i < floor_size; i++)
+		{
+			if (floor[i] == NULL)
+			{
+				floor[i] = m;
+				break ;
+			}
+			else if (i == floor_size - 1 && floor[floor_size - 1])
+			{
+				std::cout << "No place left on the floor to drop materia i can't equip!" << std::endl;
+				delete (m);
+				return ;
+			}
+		}
 		return ;
 	}
 	else

@@ -15,8 +15,19 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	ICharacter* bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(1, *bob);
+	for (int i = 0; i < 4; i++)
+	{
+		me->use(i, *bob);
+	}
+	me->equip(src->createMateria("ice"));
+	me->equip(src->createMateria("cure"));
+	me->unequip(0);
+	me->equip(src->createMateria("ice"));
+	me->equip(src->createMateria("ice"));
+	for (int i = 0; i < 4; i++)
+	{
+		me->use(i, *bob);
+	}
 	delete bob;
 	delete me;
 	delete src;
