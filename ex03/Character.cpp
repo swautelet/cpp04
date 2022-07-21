@@ -101,9 +101,8 @@ void	Character::use(int idx, ICharacter& target)
 	if (idx >= inv_size)
 	{
 		std::cout << "This is not a valid slot i can't use it" << std::endl;
-		return ;
 	}
-	if (inventory[idx])
+	else if (inventory[idx])
 	{
 		inventory[idx]->use(target);
 	}
