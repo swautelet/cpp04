@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<string>
+#include "Brain.hpp"
 
 class Animal{
 	public:
@@ -11,7 +12,8 @@ class Animal{
 		virtual Animal& operator =(const Animal& copi);
 		virtual ~Animal();
 		virtual void makeSound();
-		
+		virtual	Brain* getBrain() = 0;
+
 	private:
 
 	protected:

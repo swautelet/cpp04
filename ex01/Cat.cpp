@@ -34,7 +34,7 @@ void	Cat::makeSound()
 	std::cout << "miaouuuu miaou miaou miaouuuuuuuuuuuuuu! " << std::endl;
 }
 
-Brain& Cat::getBrain()
+Brain* Cat::getBrain()
 {
-	return(*(this->_brain));
+	return((this->_brain));
 }

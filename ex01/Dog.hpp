@@ -11,7 +11,7 @@ class Dog: public Animal{
 		Dog& operator =(const Dog& copi);
 		~Dog();
 		void makeSound();
-		Brain& getBrain();
+		Brain* getBrain();
 		
 	private:
 		Brain *_brain;
