@@ -9,8 +9,8 @@ class Animal{
 		Animal();
 		Animal(const Animal& copi);
 		Animal& operator =(const Animal& copi);
-		virtual ~Animal() = 0;
-		virtual void makeSound();
+		virtual ~Animal();
+		virtual void makeSound() = 0;
 		
 	private:
 
