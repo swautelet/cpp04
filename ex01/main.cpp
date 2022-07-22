@@ -14,6 +14,9 @@ int main()
 		else
 			test[i] = new Dog();
 	}
+	Cat test1;
+	Cat test2;
+	test1 = test2;
 	for (int i = 0; i < size; i++)
 	{
 		test[i]->makeSound();

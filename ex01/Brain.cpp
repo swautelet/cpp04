@@ -20,12 +20,13 @@ Brain::Brain(const Brain& copi)
 
 Brain& Brain::operator =(const Brain& copi)
 {
+	Brain *temp = new Brain();
 	for (int i = 0; i < 100; i++)
 	{
-		this->ideas[i] = copi.ideas[i];
+		temp->ideas[i] = copi.ideas[i];
 	}
 	std::cout << "Brain has been copied!" << std::endl;
-	return(*this);
+	return(*temp);
 }
 
 Brain::~Brain()

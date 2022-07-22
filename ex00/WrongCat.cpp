@@ -27,5 +27,5 @@ WrongCat::~WrongCat()
 
 void	WrongCat::makeSound()
 {
-	WrongAnimal::makeSound();
+	std::cout << "wrongmiaouuuu wrongmiaou wrongmiaou wrongmiaouuuuuuuuuuuuuu! " << std::endl;
 }

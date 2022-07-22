@@ -8,11 +8,12 @@ int main()
 	Dog	td;
 	Cat	tc;
 	WrongAnimal twa;
-	WrongCat	twc;
+	WrongAnimal*	twc = new WrongCat();
 
 	ta.makeSound();
 	td.makeSound();
 	tc.makeSound();
 	twa.makeSound();
-	twc.makeSound();
+	twc->makeSound();
+	delete(twc);
 }
