@@ -9,8 +9,10 @@ class ICharacter;
 class AMateria{
 	public:
 		AMateria(std::string const& type);
+		AMateria(const AMateria& copi);
+		AMateria& operator =(const AMateria& copi);
 		virtual ~AMateria();
-		std::string const & getType() const;
+		virtual std::string const & getType() const;
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
 

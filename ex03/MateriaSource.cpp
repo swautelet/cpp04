@@ -19,6 +19,25 @@ MateriaSource::~MateriaSource()
 	}
 }
 
+MateriaSource::MateriaSource(const MateriaSource& copi):IMateriaSource()
+{
+	(void) copi;
+	for (int i = 0; i < inv_size; i++)
+	{
+		inv[i] = NULL;
+	}
+}
+
+MateriaSource& MateriaSource::operator =(const MateriaSource& copi)
+{
+	(void) copi;
+	for (int i = 0; i < inv_size; i++)
+	{
+		inv[i] = NULL;
+	}
+	return (*this);
+}
+
 void	MateriaSource::learnMateria(AMateria* next)
 {
 	for (int i = 0; i < inv_size; i++)

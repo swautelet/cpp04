@@ -10,6 +10,17 @@ Ice::~Ice()
 
 }
 
+Ice::Ice(const Ice& copi):AMateria(copi)
+{
+
+}
+
+Ice& Ice::operator= (const Ice& copi)
+{
+	this->_type = copi._type;
+	return (*this);
+}
+
 AMateria* Ice::clone() const
 {
 	AMateria* ret = new Ice();

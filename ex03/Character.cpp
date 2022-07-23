@@ -14,7 +14,41 @@ Character::Character():_name("default name")
 
 Character::Character(std::string name):_name(name)
 {
+	for (int i = 0; i < inv_size; i++)
+	{
+		inventory[i] = NULL;
+	}
+	for (int i = 0; i < floor_size; i++)
+	{
+		floor[i] = NULL;
+	}
+}
 
+Character::Character(const Character& copi)
+{
+	this->_name = copi._name;
+	for (int i = 0; i < inv_size; i++)
+	{
+		inventory[i] = NULL;
+	}
+	for (int i = 0; i < floor_size; i++)
+	{
+		floor[i] = NULL;
+	}
+}
+
+Character& Character::operator =(const Character& copi)
+{
+	this->_name = copi._name;
+	for (int i = 0; i < inv_size; i++)
+	{
+		inventory[i] = NULL;
+	}
+	for (int i = 0; i < floor_size; i++)
+	{
+		floor[i] = NULL;
+	}
+	return(*this);
 }
 
 Character::~Character()
