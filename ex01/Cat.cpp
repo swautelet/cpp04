@@ -9,6 +9,7 @@ Cat::Cat():Animal()
 
 Cat::Cat(const Cat& copi)
 {
+	this->_brain = new Brain();
 	this->type = copi.type;
 	*this->_brain = *copi._brain;
 	std::cout << "An animal type " << this->type << " has been born from another one!" << std::endl;

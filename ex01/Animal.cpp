@@ -28,3 +28,8 @@ void	Animal::makeSound()
 {
 	std::cout << "Random animal sounds!" << std::endl;
 }
+
+Brain* Animal::getBrain()
+{
+	return (NULL);
+}

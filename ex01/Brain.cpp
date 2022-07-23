@@ -7,6 +7,10 @@ Brain::Brain()
 	this->ideas[1] = "i like ice cream ";
 	this->ideas[2] = " miaw ";
 	this->ideas[3] = " wouf ";
+	for (int i = 4; i < 100; i++)
+	{
+		this->ideas[i] = "";
+	}
 }
 
 Brain::Brain(const Brain& copi)
@@ -20,13 +24,13 @@ Brain::Brain(const Brain& copi)
 
 Brain& Brain::operator =(const Brain& copi)
 {
-	Brain *temp = new Brain();
+	// Brain *temp = new Brain();
 	for (int i = 0; i < 100; i++)
 	{
-		temp->ideas[i] = copi.ideas[i];
+		this->ideas[i] = copi.ideas[i];
 	}
 	std::cout << "Brain has been copied!" << std::endl;
-	return(*temp);
+	return(*this);
 }
 
 Brain::~Brain()

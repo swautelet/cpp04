@@ -9,7 +9,7 @@ class WrongAnimal{
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal& copi);
 		WrongAnimal& operator =(const WrongAnimal& copi);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		void makeSound();
 		
 	private:
