@@ -3,15 +3,17 @@
 
 #include<iostream>
 #include<string>
+#include "Brain.hpp"
 
 class Animal{
 	public:
 		Animal();
 		Animal(const Animal& copi);
-		Animal& operator =(const Animal& copi);
+		virtual Animal& operator =(const Animal& copi);
 		virtual ~Animal();
 		virtual void makeSound() = 0;
-		
+		virtual	Brain* getBrain();
+
 	private:
 
 	protected:

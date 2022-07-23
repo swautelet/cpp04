@@ -9,15 +9,16 @@ Cat::Cat():Animal()
 
 Cat::Cat(const Cat& copi)
 {
+	this->_brain = new Brain();
 	this->type = copi.type;
-	this->_brain = copi._brain;
+	*this->_brain = *copi._brain;
 	std::cout << "An animal type " << this->type << " has been born from another one!" << std::endl;
 }
 
 Cat& Cat::operator =(const Cat& copi)
 {
 	this->type = copi.type;
-	this->_brain = copi._brain;
+	*this->_brain = *copi._brain;
 	std::cout << "An animal type " << this->type << " has been copied from another one!" << std::endl;
 	return (*this);
 }
@@ -32,4 +33,9 @@ Cat::~Cat()
 void	Cat::makeSound()
 {
 	std::cout << "miaouuuu miaou miaou miaouuuuuuuuuuuuuu! " << std::endl;
+}
+
+Brain* Cat::getBrain()
+{
+	return((this->_brain));
 }

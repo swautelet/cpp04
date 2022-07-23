@@ -8,9 +8,10 @@ class Dog: public Animal{
 	public:
 		Dog();
 		Dog(const Dog& copi);
-		Dog& operator =(const Dog& copi);
-		~Dog();
-		void makeSound();
+		virtual Dog& operator =(const Dog& copi);
+		virtual ~Dog();
+		virtual void makeSound();
+		virtual Brain* getBrain();
 		
 	private:
 		Brain *_brain;
