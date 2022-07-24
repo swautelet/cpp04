@@ -49,6 +49,7 @@ void	MateriaSource::learnMateria(AMateria* next)
 			return ;
 		}
 	}
+	delete(next);
 	std::cout << "No more place to learn materia!" << std::endl;
 }
 
