@@ -35,6 +35,11 @@ Character::Character(const Character& copi)
 	{
 		floor[i] = NULL;
 	}
+	for (int i = 0; i < inv_size; i++)
+	{
+		if (copi.inventory[i])
+			inventory[i] = copi.inventory[i]->clone();
+	}
 }
 
 Character& Character::operator =(const Character& copi)
@@ -42,11 +47,15 @@ Character& Character::operator =(const Character& copi)
 	this->_name = copi._name;
 	for (int i = 0; i < inv_size; i++)
 	{
-		inventory[i] = NULL;
+		if (inventory[i])
+			delete(inventory[i]);
+		if (copi.inventory[i])
+			inventory[i] = copi.inventory[i]->clone();
 	}
 	for (int i = 0; i < floor_size; i++)
 	{
-		floor[i] = NULL;
+		if (floor[i])
+			delete(floor[i]);
 	}
 	return(*this);
 }
